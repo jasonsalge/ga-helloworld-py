@@ -17,7 +17,7 @@ parser.add_argument('--lucky', dest='lucky', type=float, action='store', default
 args = parser.parse_args()
 print("ARGS is {0}".format(args))
 
-target = ''.join(args.words) if len(args.words) else "Hello world!"
+target = ' '.join(args.words) if len(args.words) else "Hello world!"
 
 print(target)
 
@@ -89,7 +89,7 @@ def evolve(pop, fitness_fn, gene_pool, retain=0.2, random_select=0.5, mutate=0.0
 
 generation = 0
 
-ascii_gene_pool = string.ascii_letters + string.punctuation + string.digits + ' ' + string.ascii_letters + string.digits + string.ascii_letters 
+ascii_gene_pool = string.ascii_letters + ' ' + string.punctuation + string.digits + ' ' + string.ascii_letters + string.digits + ' ' + string.ascii_letters 
 
 pop = population(args.pop_size, len(target), ascii_gene_pool)
 target_fitness = fitness_fn(target)
