@@ -45,7 +45,7 @@ def replace_char(orig, index, new_char):
     second_part = orig[index+1:]
     return first_part + new_char + second_part
 
-def evolve(pop, fitness_fn, gene_pool, retain=0.2, random_select=0.5, mutate=0.01):
+def evolve(pop, fitness_fn, gene_pool, retain=0.2, random_select=0.05, mutate=0.01):
     
     sys_rand = random.SystemRandom()
     # http://lethain.com/genetic-algorithms-cool-name-damn-simple/
